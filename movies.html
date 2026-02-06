@@ -9,38 +9,82 @@
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="movies.html">Movies</a></li>
-          <li><a href="series.html">Series</a></li>
-          <li><a href="music.html">Music</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="movies.html">movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="music.html">music</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="series.html">series</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
-      <p>Film 1</p>
-      <p>Utgivningsår:</p>
-      <p>Skådespelare:</p>
-      <p>IMDB-länk:</p>
-      <p>Genre:</p>
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-3">
+          <div class="card">
+        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="The Human Centipede poster">
+        <div class="card-body">
+          <h5 class="card-title">The Human Centipede (First Sequence)</h5>
+          <p class="card-text">
+            <strong>Skådespelare:</strong> Dieter Laser, Akihiro Kitamura<br>
+            <strong>Genre:</strong> Skräck<br>
+            <strong>Utgivningsår:</strong> 2009
+          </p>
+          <a href="https://www.imdb.com/title/tt1467304/" class="btn btn-primary" target="_blank" rel="noopener">IMDB-länk</a>
+        </div>
+          </div>
+        </div>
 
-      <p>Film 2</p>
-      <p>Utgivningsår:</p>
-      <p>Skådespelare:</p>
-      <p>IMDB-länk:</p>
-      <p>Genre:</p>
+        <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <img src="https://imusic.b-cdn.net/images/item/original/581/7321902176581.jpg?the-dark-knight-2008-batman-the-dark-knight-2008-special-edition-dvd&class=scaled&v=1256965259" class="card-img-top" alt="The Dark Knight poster">
+            <div class="card-body">
+              <h5 class="card-title">The Dark Knight</h5>
+              <p class="card-text">
+                <strong>Skådespelare:</strong> Christian Bale, Heath Ledger<br>
+                <strong>Genre:</strong> Action / Kriminaldrama<br>
+                <strong>Utgivningsår:</strong> 2008
+              </p>
+              <a href="https://www.imdb.com/title/tt0468569/" class="btn btn-primary" target="_blank" rel="noopener">IMDB-länk</a>
+            </div>
+          </div>
+        </div>
 
-      <p>Film 3</p>
-      <p>Utgivningsår:</p>
-      <p>Skådespelare:</p>
-      <p>IMDB-länk:</p>
-      <p>Genre:</p>
+        <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <img src="https://m.media-amazon.com/images/I/912AErFSBHL.jpg" class="card-img-top" alt="Inception poster">
+            <div class="card-body">
+              <h5 class="card-title">Inception</h5>
+              <p class="card-text">
+                <strong>Skådespelare:</strong> Leonardo DiCaprio, Joseph Gordon-Levitt<br>
+                <strong>Genre:</strong> Sci-fi / Thriller<br>
+                <strong>Utgivningsår:</strong> 2010
+              </p>
+              <a href="https://www.imdb.com/title/tt1375666/" class="btn btn-primary" target="_blank" rel="noopener">IMDB-länk</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
     <footer>
       <p>© 2026</p>
     </footer>
+
     <script src="init.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
